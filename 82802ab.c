@@ -116,12 +116,9 @@ int erase_82802ab_block(struct flashchip *flash, int offset)
 
 	// clear status register
 	chip_writeb(0x50, bios);
-	//printf("Erase at %p\n", bios);
-	// clear write protect
-	//printf("write protect is at %p\n", (wrprotect));
-	//printf("write protect is 0x%x\n", *(wrprotect));
+	printf_debug("Erasing block at %p, block locking register at %p\n", bios, wrprotect);
 	chip_writeb(0, wrprotect);
-	//printf("write protect is 0x%x\n", *(wrprotect));
+	printf_debug("AFTER unlock: 0x%02x\n", *wrprotect);
 
 	// now start it
 	chip_writeb(0x20, bios);
