@@ -1,0 +1,9 @@
+deferred privilege testing
+chipset->bus knowledge
+bus->bus bridge knowledge (lpc->spi via siochip)
+bus->flashchip knowledge
+dynamic probing (skip ISA)
+working status callbacks
+SPImaster->SPIcommand mask
+SPIchip->SPIcommand
+SPIchip->timing
